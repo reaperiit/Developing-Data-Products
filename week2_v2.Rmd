@@ -1,0 +1,28 @@
+---
+title: "Developing Data Products Week2 Assignment"
+author: "Deepak"
+date: "September 11, 2017"
+output: html_document
+self_contained:TRUE
+---
+
+## Developing Data Products Week 2 Assignment- My College- IIT Patna
+### September 11, 2017
+
+### Instructions that I followed:
+1.Create a web page using R Markdown that features a map created with Leaflet.
+
+2.Host the webpage on RPubs.
+
+3.Webpage must contain a map created using Leaflet and the date of creation.
+
+```{r,echo=TRUE,warning=FALSE}
+#self_contained: no
+library(leaflet)
+library(htmlwidgets)
+suppressPackageStartupMessages(library(dplyr))
+leaflet() %>% addTiles() %>% addMarkers(lat=25.5358, lng=84.8511, popup = "My College")
+```
+
+
+
